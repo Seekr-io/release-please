@@ -385,6 +385,7 @@ export class Manifest {
         targetBranch: this.targetBranch,
         repositoryConfig: this.repositoryConfig,
         manifestPath: this.manifestPath,
+        logger: this.logger,
       })
     );
     this.pullRequestOverflowHandler = new FilePullRequestOverflowHandler(

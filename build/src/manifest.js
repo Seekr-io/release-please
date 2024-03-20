@@ -104,6 +104,7 @@ class Manifest {
             targetBranch: this.targetBranch,
             repositoryConfig: this.repositoryConfig,
             manifestPath: this.manifestPath,
+            logger: this.logger,
         }));
         this.pullRequestOverflowHandler = new pull_request_overflow_handler_1.FilePullRequestOverflowHandler(this.github, this.logger);
     }
