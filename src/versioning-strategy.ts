@@ -39,13 +39,7 @@ export class MajorVersionUpdate implements VersionUpdater {
    * @returns {Version} The bumped version
    */
   bump(version: Version): Version {
-    return new Version(
-      version.major + 1,
-      0,
-      0,
-      version.preRelease,
-      version.build
-    );
+    return new Version(version.major + 1, 0, 0, undefined, version.build);
   }
 }
 
@@ -64,7 +58,7 @@ export class MinorVersionUpdate implements VersionUpdater {
       version.major,
       version.minor + 1,
       0,
-      version.preRelease,
+      undefined,
       version.build
     );
   }
@@ -85,7 +79,7 @@ export class PatchVersionUpdate implements VersionUpdater {
       version.major,
       version.minor,
       version.patch + 1,
-      version.preRelease,
+      undefined,
       version.build
     );
   }
